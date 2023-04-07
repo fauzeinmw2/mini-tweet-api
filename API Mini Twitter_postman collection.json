@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "d0d17350-1237-4e53-a316-d8493affef09",
+		"name": "Latihan Nodejs - API Mini Twitter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13215690"
+	},
+	"item": [
+		{
+			"name": "Tweet",
+			"item": [
+				{
+					"name": "Get All Tweet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all-tweets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all-tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Tweet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tweets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tweet By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tweets/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tweets",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Tweet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Saat ini, ada begitu banyak hal yang bisa kita lakukan untuk membuat dunia menjadi tempat yang lebih baik. Mari bersama-sama berbuat kebaikan dengan tindakan kecil yang berarti.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tweets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Tweet By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Saat ini, ada begitu banyak hal yang bisa kita lakukan untuk membuat dunia menjadi tempat yang lebih baik. Mari bersama-sama berbuat kebaikan dengan tindakan kecil yang berarti.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tweets/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tweets",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tweet By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tweets/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tweets",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Get Comment By ID Tweet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/comments-tweet/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comments-tweet",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comment By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/comments/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comments",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tweet_id\": 5,\n    \"description\": \"Mau Comment Apa??\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Comment By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Masyaallah Brother\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/comments/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA5MDQ0NjEsImV4cCI6MTY4MDkwODA2MX0.tCfFJ6VbjCujsd81v-HmuHJQ9a5pDp9IhUPXQumRw2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/comments/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comments",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzUxMzksImV4cCI6MTY4MDg3ODczOX0.qO-FL2Cyrqxtq1DPVYlslPTEXzoeEIMH3pe6u2sPtm4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Budi mahabudiman\",\n    \"email\": \"budi@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"fauzeinmw2@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

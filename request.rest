@@ -1,0 +1,97 @@
+###
+GET http://localhost:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzUxMzksImV4cCI6MTY4MDg3ODczOX0.qO-FL2Cyrqxtq1DPVYlslPTEXzoeEIMH3pe6u2sPtm4
+
+###
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "name": "Siapa Hayooo???",
+    "email": "anonymous@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "fauzeinmw2@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:3000/token
+
+###
+DELETE http://localhost:3000/logout
+
+
+
+# Tweet
+###
+GET http://localhost:3000/all-tweets
+
+###
+GET http://localhost:3000/tweets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzEzMjIsImV4cCI6MTY4MDg3NDkyMn0.u5vmGaFzrOrIx_k16nm8QMPuzxQmehQXQ-DFF8ZS4t4
+
+###
+GET http://localhost:3000/tweets/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzEzMjIsImV4cCI6MTY4MDg3NDkyMn0.u5vmGaFzrOrIx_k16nm8QMPuzxQmehQXQ-DFF8ZS4t4
+
+###
+POST http://localhost:3000/tweets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJTaWFwYSBIYXlvb28_Pz8iLCJlbWFpbCI6ImFub255bW91c0BnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzA0MTEsImV4cCI6MTY4MDg3NDAxMX0.S5HD6KGi-dd9kAVLO3zkccpsuv8ovbpvumMX23oD4sM
+Content-Type: application/json
+
+{
+    "description": "Tweet ke-2"
+}
+
+###
+PATCH http://localhost:3000/tweets/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NTk3NjksImV4cCI6MTY4MDg2MzM2OX0.HH6tAwYSTj4oIAqo0X3HhJPfGFUWsKVJRu28K1lxdCI
+Content-Type: application/json
+
+{
+    "description": "Tweet Update"
+}
+
+###
+DELETE http://localhost:3000/tweets/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NTk3NjksImV4cCI6MTY4MDg2MzM2OX0.HH6tAwYSTj4oIAqo0X3HhJPfGFUWsKVJRu28K1lxdCI
+
+
+
+# Comment
+###
+GET http://localhost:3000/comments-tweet/2
+
+###
+GET http://localhost:3000/comments/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzEzMjIsImV4cCI6MTY4MDg3NDkyMn0.u5vmGaFzrOrIx_k16nm8QMPuzxQmehQXQ-DFF8ZS4t4
+
+###
+POST http://localhost:3000/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzEzMjIsImV4cCI6MTY4MDg3NDkyMn0.u5vmGaFzrOrIx_k16nm8QMPuzxQmehQXQ-DFF8ZS4t4
+Content-Type: application/json
+
+{
+    "tweet_id": 2,
+    "description": "Comment Fauzein"
+}
+
+###
+PATCH http://localhost:3000/comments/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzEzMjIsImV4cCI6MTY4MDg3NDkyMn0.u5vmGaFzrOrIx_k16nm8QMPuzxQmehQXQ-DFF8ZS4t4
+Content-Type: application/json
+
+{
+    "description": "Update Comment WOW"
+}
+
+###
+DELETE http://localhost:3000/comments/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYXV6ZWluIE11bHlhIFdhcm1hbiIsImVtYWlsIjoiZmF1emVpbm13MkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NzEzMjIsImV4cCI6MTY4MDg3NDkyMn0.u5vmGaFzrOrIx_k16nm8QMPuzxQmehQXQ-DFF8ZS4t4
